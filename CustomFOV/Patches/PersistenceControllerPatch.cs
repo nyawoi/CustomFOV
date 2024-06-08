@@ -44,5 +44,12 @@ public static class PersistenceControllerPatch
         });
         // Set the slider's value
         fovSliderSlider.value = CustomFOV.BaseFOV;
+        
+        // Retrieve the Apply button to modify it
+        var applyButtonTransform = __instance.graphicsMenu.transform.Find("Menu/Body/Button - Apply");
+        
+        // Resize the Apply button so it's not too large
+        applyButtonTransform.localScale = new Vector3(0.8f, 0.8f, 0.8f);
+        applyButtonTransform.localPosition = new Vector3(-310f, -290f, 0);
     }
 }
